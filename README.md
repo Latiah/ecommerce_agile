@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  Agile & DevOps practices Lab
+
+## 1. Product Vision
+**"An ecommerce project that allows users to check products and buy or order what they want."**
+
+---
 
 ## Getting Started
 
 First, run the development server:
-
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 2. Tech Stack
+- **Framework:** Next.js 
+- **Database:** Supabase
+- **API:** FakeStoreAPI
+- **Testing:** Vitest
+- **CI/CD:** GitHub Actions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+##  DevOps Practice 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### CI/CD Pipeline
+The project uses **GitHub Actions** (`.github/workflows/ci.yml`) to ensure code quality. The pipeline triggers on every **push** to the main branch and performs:
+1. Dependency Installation
+2. Automated Testing (Vitest)
+3. Production Build (`next build`)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Testing
+We utilize **Vitest** for three types of validation:
+- **API Mocks:** Testing handling of external product data.
+- **Database Mocks:** Testing Supabase insertion logic without polluting real data.
+- **Logic Tests:** Verifying the mathematical accuracy of the shopping cart total.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation Commands
+```bash
+# Install dependencies
+npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Run the development server
+npm run dev
+
+# Run automated tests
+npm test
+```
+---
