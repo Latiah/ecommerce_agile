@@ -10,11 +10,11 @@ vi.mock('@/lib/supabase', () => ({
   },
 }));
 
-// 1. Test the Product API (Using a Mock)
+// 1. Test the Product API 
 describe('API Check', () => {
   test('FakeStore API should return products correctly', async () => {
     
-    // We MOCK the fetch function so it doesn't actually go to the internet
+    // We MOCK the fetch function so it doesn't go to the internet
     global.fetch = vi.fn().mockResolvedValue({
       status: 200,
       ok: true,
