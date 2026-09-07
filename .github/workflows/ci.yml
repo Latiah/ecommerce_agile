@@ -18,13 +18,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       # Install your project dependencies
       - name: Install Dependencies
         run: npm install
 
+
+      # Lint
+      - name: Lint
+        run: npm run lint
 
       # Run tests 
       - name: Run Tests
