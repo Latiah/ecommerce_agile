@@ -3,6 +3,8 @@
 ## 1. Product Vision
 **"An ecommerce project that allows users to check products and buy or order what they want."**
 
+Full sprint planning, reviews, and retrospectives are documented in [docs/SPRINTS.md](./docs/SPRINTS.md).
+
 ---
 
 ## Getting Started
